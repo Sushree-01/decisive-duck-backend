@@ -15,6 +15,10 @@ const ProjectRouter = require("./routes/project.route");
 const TimerRouter = require("./routes/timer");
 
 
+app.get("/",(req,res)=>{
+  res.send("welcom to dashboard")
+})
+
 
 //Register
 
@@ -77,14 +81,14 @@ app.use("/client", clientRouter);
 app.use("/project", ProjectRouter);
 app.use("/tags", tagsRouter);
 
-app.listen(process.env.PORT, async () => {
-  try {
-    await connection;
-    console.log("connected to DB ");
-  } catch (err) {
-    console.log("failed to connect db");
-    console.log(err);
-  }
-  console.log(`server runing at ${process.env.PORT}`);
-});
+// app.listen(process.env.PORT, async () => {
+//   try {
+//     await connection;
+//     console.log("connected to DB ");
+//   } catch (err) {
+//     console.log("failed to connect db");
+//     console.log(err);
+//   }
+//   console.log(`server runing at ${process.env.PORT}`);
+// });
 
