@@ -11,8 +11,10 @@ tagsRouter.get("/search",async(req,res)=>{
     
     })
 //get
+
 tagsRouter.get("/:userId",async(req,res)=>{
-    const user=req.params.userId
+    const user=req.params.userId;
+    console.log(user);
     try{
     var tags= await tagModel.find({user})
     }catch(err){
