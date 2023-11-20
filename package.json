@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/Sushree-01/decisive-duck-backend/issues"
   },
+  "engines": {
+    "node": ">=16 <20"
+    },
   "homepage": "https://github.com/Sushree-01/decisive-duck-backend#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
